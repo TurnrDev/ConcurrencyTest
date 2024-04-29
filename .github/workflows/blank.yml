@@ -22,4 +22,4 @@ jobs:
       cancel-in-progress: true
     needs: [sleep]
     steps:
-      - run: echo This one will be approved second. 
+      - run: echo This one will be approved first. 
