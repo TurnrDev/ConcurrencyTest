@@ -3,7 +3,8 @@ jobs:
   dummy:
     runs-on: ubuntu-latest
     environment: staging
-    steps: []
+    steps:
+      - run: echo Hello, World!
   sleep:
     runs-on: ubuntu-latest
     concurrency:
