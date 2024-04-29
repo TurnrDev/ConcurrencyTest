@@ -1,8 +1,11 @@
 on: push
 jobs:
-  sleep:
+  dummy:
     runs-on: ubuntu-latest
     environment: staging
+    steps: []
+  sleep:
+    runs-on: ubuntu-latest
     concurrency:
       group: "sleep"
     steps:
