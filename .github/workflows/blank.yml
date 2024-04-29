@@ -1,0 +1,13 @@
+name: CI
+
+on: push
+
+
+jobs:
+  sleep:
+    runs-on: ubuntu-latest
+    environment: staging
+    concurrency:
+      group: "sleep"
+    steps:
+      - run: sleep 300
