@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: "sleep"
+    needs: [dummy]
     steps:
       - run: echo Step Before
       - run: sleep 300
