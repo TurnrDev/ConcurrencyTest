@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: "sleep"
+      cancel-in-progress: true
     needs: [dummy]
     steps:
       - run: echo Step Before
@@ -18,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: "next"
+      cancel-in-progress: true
     needs: [sleep]
     steps:
       - run: echo Hello, World! This is Jay!
