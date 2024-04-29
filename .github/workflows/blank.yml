@@ -17,4 +17,4 @@ jobs:
       cancel-in-progress: true
     needs: [sleep]
     steps:
-      - run: echo Hello
+      - run: echo Hello, World
