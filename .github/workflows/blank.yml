@@ -7,4 +7,14 @@ jobs:
       group: "sleep"
       cancel-in-progress: true
     steps:
+      - run: echo Step Before
       - run: sleep 300
+      - run: echo Step After
+  next:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: "next"
+      cancel-in-progress: true
+    needs: [sleep]
+    steps:
+      - run: echo Hello
