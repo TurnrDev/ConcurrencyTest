@@ -1,8 +1,4 @@
-name: CI
-
 on: push
-
-
 jobs:
   sleep:
     runs-on: ubuntu-latest
